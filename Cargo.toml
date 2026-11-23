@@ -1,0 +1,21 @@
+[package]
+name = "strata-mcp-demo"
+version = "0.1.0"
+edition = "2021"
+authors = ["Strata Contributors"]
+license = "MIT"
+description = "Standalone example application and external JSON-RPC 2.0 MCP automation client for Strata UI"
+repository = "https://github.com/strataui/mcp"
+homepage = "https://github.com/strataui/mcp"
+keywords = ["strata", "mcp", "gui", "automation", "testing"]
+categories = ["gui", "development-tools::testing"]
+
+[workspace]
+
+[[bin]]
+name = "mcp-demo"
+path = "src/main.rs"
+
+[dependencies]
+strata-ui = { git = "https://github.com/strataui/strata.git", features = ["ui"] }
+strata-dom = { git = "https://github.com/strataui/strata.git" }
