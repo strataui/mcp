@@ -5,3 +5,6 @@ Cargo.lock
 *.bak
 .DS_Store
 *.png
+
+# Local sibling-repo development patches (never commit)
+.cargo/config.toml

@@ -1,21 +1,28 @@
-[package]
-name = "strata-mcp-demo"
+[workspace]
+resolver = "2"
+members = [
+    "crates/strata_mcp",
+    "examples/mcp_demo",
+]
+
+[workspace.package]
 version = "0.1.0"
-edition = "2021"
 authors = ["Strata Contributors"]
+edition = "2021"
 license = "MIT"
-description = "Standalone example application and external JSON-RPC 2.0 MCP automation client for Strata UI"
 repository = "https://github.com/strataui/mcp"
 homepage = "https://github.com/strataui/mcp"
+documentation = "https://docs.rs/strata-mcp"
 keywords = ["strata", "mcp", "gui", "automation", "testing"]
 categories = ["gui", "development-tools::testing"]
 
-[workspace]
+[workspace.dependencies]
+strata-mcp = { path = "crates/strata_mcp", version = "0.1.0" }
+strata-ui = "0.1.4"
+strata-dom = "0.1.2"
+strata-ui-platform = "0.1.2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 
-[[bin]]
-name = "mcp-demo"
-path = "src/main.rs"
-
-[dependencies]
-strata-ui = { git = "https://github.com/strataui/strata.git", features = ["ui"] }
-strata-dom = { git = "https://github.com/strataui/strata.git" }
+[profile.dev]
+opt-level = 1

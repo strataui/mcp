@@ -1,0 +1,25 @@
+[package]
+name = "strata-mcp"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Model Context Protocol (MCP) JSON-RPC 2.0 server and IPC automation client for Strata UI"
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[[bin]]
+name = "strata-mcp"
+path = "src/main.rs"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+strata-ui = { workspace = true }
+strata-dom = { workspace = true }
+strata-ui-platform = { workspace = true }

@@ -14,6 +14,8 @@ def resolve_strata_mcp_bin() -> str:
         return env_bin
     repo_root = os.path.dirname(os.path.abspath(__file__))
     for rel in (
+        "target/release/strata-mcp",
+        "target/debug/strata-mcp",
         "../strata/target/release/strata-mcp",
         "../strata/target/debug/strata-mcp",
     ):
